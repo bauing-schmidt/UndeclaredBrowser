@@ -63,7 +63,7 @@ UndeclaredBrowser >> initializePresenters [
 		displayingProgress: 'Collecting references'.
 
 	undeclaredList := self newTable.
-	methodsList := self newTable.
+	methodsList := self newTable beResizable.
 	codePresenter := self newCode.
 
 	undeclaredList addColumn:
