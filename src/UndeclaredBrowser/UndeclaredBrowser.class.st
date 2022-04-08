@@ -60,7 +60,7 @@ UndeclaredBrowser >> initializePresenters [
 					 select: [ :each | each isKindOf: CompiledCode ]
 					 thenCollect: [ :each | each method ]).
 			index := index + 1 ]
-		displayingProgress: 'Collectiong references'.
+		displayingProgress: 'Collecting references'.
 
 	undeclaredList := self newTable.
 	methodsList := self newTable.
