@@ -56,9 +56,7 @@ UndeclaredBrowser >> initializePresenters [
 	index := 1.
 	undeclaredAssocs
 		do: [ :assoc | 
-			undeclared at: index put: assoc key -> (assoc pointersTo
-					 select: [ :each | each isKindOf: CompiledCode ]
-					 thenCollect: [ :each | each method ]).
+			undeclared at: index put: assoc key -> (assoc usingMethods).
 			index := index + 1 ]
 		displayingProgress: 'Collecting references'.
 
